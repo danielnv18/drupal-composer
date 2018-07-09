@@ -9,6 +9,8 @@ bower_components
 /web/themes/contrib/
 /web/profiles/contrib/
 /web/libraries/
+/.editorconfig
+/.gitattributes
 
 # Ignore sensitive information#
 ###############################
