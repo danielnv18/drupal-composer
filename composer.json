@@ -1,0 +1,31 @@
+{
+    "name": "danielnv18/drupal-composer",
+    "description": "Project template for Drupal 8 projects with composer",
+    "type": "project",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Daniel Noyola",
+            "email": "danielnv18@gmail.com"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "require": {}
+}
