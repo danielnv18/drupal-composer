@@ -8,7 +8,7 @@
     "authors": [
         {
             "name": "Daniel Noyola",
-            "email": "danielnv18@gmail.com"
+            "email": "daniel@noyola.io"
         }
     ],
     "config": {
@@ -26,6 +26,11 @@
     ],
     "conflict": {
         "drupal/drupal": "*"
+    },
+    "autoload": {
+        "files": [
+            "load.environment.php"
+        ]
     },
     "require": {
         "composer/installers": "^1.2",
