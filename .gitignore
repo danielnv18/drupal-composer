@@ -4,13 +4,7 @@ node_modules
 bower_components
 /drush/contrib/
 /vendor/
-/web/core/
-/web/modules/contrib/
-/web/themes/contrib/
-/web/profiles/contrib/
-/web/libraries/
-/.editorconfig
-/.gitattributes
+/build/
 
 # Ignore sensitive information#
 ###############################
