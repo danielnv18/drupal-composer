@@ -29,7 +29,7 @@
     },
     "autoload": {
         "files": [
-            "load.environment.php"
+            "load.env.php"
         ]
     },
     "require": {
