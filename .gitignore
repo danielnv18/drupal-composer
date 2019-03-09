@@ -5,6 +5,7 @@ bower_components
 /drush/contrib/
 /vendor/
 /build/
+/src/sites/default/files
 
 # Ignore sensitive information#
 ###############################
