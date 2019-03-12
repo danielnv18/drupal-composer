@@ -37,7 +37,7 @@
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/admin_toolbar": "^1.26",
-        "drupal/core": "~8.6.0",
+        "drupal/core": "~8.7.0",
         "symfony/dotenv": "~3.4|~4.3"
     },
     "require-dev": {
