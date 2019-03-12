@@ -37,16 +37,13 @@
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/core": "~8.6.0",
-        "symfony/dotenv": "~3.4|~4.3",
-        "webflo/drupal-finder": "^1.0.0",
-        "webmozart/path-util": "^2.3"
+        "symfony/dotenv": "~3.4|~4.3"
     },
     "require-dev": {
         "drupal/coder": "^8.2",
-        "drupal/console": "^1.0.2",
-        "drush/drush": "^9.0.0",
-        "kporras07/composer-symlinks": "^0.1.0@dev",
-        "webflo/drupal-core-require-dev": "^8.5"
+        "drupal/console": "^1.8",
+        "drush/drush": "^9",
+        "kporras07/composer-symlinks": "^0.1.0@dev"
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
