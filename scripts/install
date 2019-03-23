@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Install the Drupal site.
+#: exec_target = cli
