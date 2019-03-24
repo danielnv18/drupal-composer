@@ -39,13 +39,13 @@
         "drupal/admin_toolbar": "^1.26",
         "drupal/config_split": "^1.4",
         "drupal/core": "~8.7.0",
+        "kporras07/composer-symlinks": "^0.1.0@dev",
         "symfony/dotenv": "~3.4|~4.3"
     },
     "require-dev": {
         "drupal/coder": "^8.2",
         "drupal/console": "^1.8",
-        "drush/drush": "^9",
-        "kporras07/composer-symlinks": "^0.1.0@dev"
+        "drush/drush": "^9"
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
