@@ -1,1 +1,27 @@
 version: "2.1"
+services:
+  cli:
+    env_file:
+      - ../.env
+
+  web:
+    env_file:
+      - ../.env
+
+  db:
+    env_file:
+      - ../.env
+
+# Optional mailhog service for local dev.
+# Uncomment if needed.
+#  mail:
+#    extends:
+#      file: ${HOME}/.docksal/stacks/services.yml
+#      service: mail
+
+# Solr server.
+# Uncomment if needed.
+#  solr:
+#    extends:
+#      file: ${HOME}/.docksal/stacks/services.yml
+#      service: solr
