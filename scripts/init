@@ -22,6 +22,12 @@ echo-yellow () { echo -e "${yellow}$1${NC}"; }
 
 #-------------------------- Execution --------------------------------
 
+# Copy env file
+ENV_FILE="${PROJECT_ROOT}/.env"
+if [ ! -f ${ENV_FILE} ]; then
+  cp ${PROJECT_ROOT}/.env.dist ${ENV_FILE}
+fi
+
 # Stack initialization
 echo -e "${green_bg}${NC}${green} Initializing stack...${NC}"
 fin up
