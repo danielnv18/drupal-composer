@@ -1,3 +1,16 @@
 #!/usr/bin/env bash
-# Build Drupal site.
 #: exec_target = cli
+## Build Drupal site.
+
+# Abort if anything fails
+set -e
+
+#-------------------------- Execution --------------------------------
+
+# Stack initialization
+echo -e "Installing and building composer dependencies..."
+composer install
+
+#-------------------------- END: Execution --------------------------------
+
+
