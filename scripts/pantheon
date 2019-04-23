@@ -11,7 +11,8 @@ WEB_DIR="$PROJECT_ROOT/$DOCROOT"
 BUILD_DIR="$PROJECT_ROOT/build/pantheon"
 
 if [ ! -d "$BUILD_DIR" ]; then
-# sync git
+  cd ${PROJECT_ROOT}/build
+  git clone ${PANTHEON_GIT} pantheon
 fi
 
 # Copy Composer files.
