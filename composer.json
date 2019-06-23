@@ -50,6 +50,7 @@
         "drush/drush": "^9"
     },
     "scripts": {
+        "post-create-project-cmd": "./scripts/setup",
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "project-scaffold": [
             "Kporras07\\ComposerSymlinks\\ScriptHandler::createSymlinks"
