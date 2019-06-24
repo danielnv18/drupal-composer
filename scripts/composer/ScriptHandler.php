@@ -10,8 +10,7 @@ namespace DrupalComposer\composer;
 use Composer\Script\Event;
 use Composer\Semver\Comparator;
 use DrupalFinder\DrupalFinder;
-use Symfony\Component\Filesystem\Filesystem;
-use Webmozart\PathUtil\Path;
+use Drupal\Component\Utility\Crypt;
 
 class ScriptHandler {
 
@@ -34,20 +33,10 @@ class ScriptHandler {
       "sed -i \"s/drupal-composer/{$save_project}/g\" " . $drupalFinder->getComposerRoot() . "/.docksal/docksal.env"
     );
 
-
-    // Prepare the settings file for installation
-    $fs = new Filesystem();
-    $drupalFinder = new DrupalFinder();
-    $drupalRoot = $drupalFinder->getDrupalRoot();
-    $fs->chmod($drupalRoot . '/sites/default/settings.php', 0666);
-
-    // Create the files directory with chmod 0777
-    if (!$fs->exists($drupalRoot . '/sites/default/files')) {
-      $oldmask = umask(0);
-      $fs->mkdir($drupalRoot . '/sites/default/files', 0777);
-      umask($oldmask);
-      $io->write("Created a sites/default/files directory with chmod 0777");
-    }
+    $hash = Crypt::randomBytesBase64(55);
+    exec(
+      "sed -i \"s/pleaseChangeThisToADifferentRandomString/{$hash}/g\" " . $drupalFinder->getComposerRoot() . "/.env.dist"
+    );
   }
 
   /**
