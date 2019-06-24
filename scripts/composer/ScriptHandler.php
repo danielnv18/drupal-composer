@@ -18,8 +18,22 @@ class ScriptHandler {
   public static function setupProject(Event $event) {
     $io = $event->getIO();
 
-    $project = $io->ask('What\'s the project\'s name?', 'test');
-    $io->write($project);
+    $drupalFinder = new DrupalFinder();
+    $drupalFinder->locateRoot(getcwd());
+
+
+    $current_dir = explode('/', $drupalFinder->getComposerRoot());
+    $default_project = $current_dir[sizeof($current_dir) -1];
+    $project = $io->ask("What's the project's name? [{$default_project}]: ", $default_project);
+    $save_project =  preg_replace('/\s+/', '-', strtolower(trim($project)));
+
+    exec(
+      "sed -i \"s/drupal-composer/{$save_project}/g\" " . $drupalFinder->getComposerRoot() . "/.env.dist"
+    );
+    exec(
+      "sed -i \"s/drupal-composer/{$save_project}/g\" " . $drupalFinder->getComposerRoot() . "/.docksal/docksal.env"
+    );
+
   }
 
   /**
