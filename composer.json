@@ -52,7 +52,9 @@
         "drush/drush": "^9"
     },
     "scripts": {
-        "post-create-project-cmd": "DrupalProject\\composer\\ScriptHandler::setupProject",
+        "post-create-project-cmd": [
+            "DrupalComposer\\composer\\ScriptHandler::setupProject"
+        ],
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "project-scaffold": [
             "Kporras07\\ComposerSymlinks\\ScriptHandler::createSymlinks"
