@@ -41,7 +41,6 @@
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal-settings/basic": "^1.0",
-        "drupal/admin_toolbar": "^1.26",
         "drupal/config_split": "^1.4",
         "drupal/core": "~8.7.0",
         "kporras07/composer-symlinks": "^0.1.0@dev",
