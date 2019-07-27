@@ -1,0 +1,4 @@
+name: drupal-composer
+recipe: drupal8
+config:
+  webroot: build/html
