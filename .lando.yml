@@ -1,4 +1,6 @@
 name: drupal-composer
 recipe: drupal8
 config:
+  via: nginx
   webroot: build/html
+  xdebug: true
