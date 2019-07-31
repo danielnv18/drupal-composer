@@ -2,6 +2,7 @@ name: drupal-composer
 recipe: drupal8
 config:
   via: nginx
+  php: '7.3'
   webroot: build/html
   database: mysql
   xdebug: true
