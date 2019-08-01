@@ -6,3 +6,18 @@ config:
   webroot: build/html
   database: mysql
   xdebug: true
+
+env_file:
+  - /app/.env
+
+services:
+  appserver:
+    build:
+      - composer install
+    run:
+      - /app/scripts/bash/install.sh
+
+tooling:
+  drush:
+    service: appserver
+    cmd: "/app/vendor/bin/drush --root=/app/build/html"
