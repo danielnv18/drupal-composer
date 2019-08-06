@@ -10,7 +10,7 @@ bower_components
 ###############################
 /src/sites/default/services.local.yml
 /src/sites/default/settings.local.php
-.env
+/.env.local
 
 # Ignore Drupal's file directory #
 ##################################
