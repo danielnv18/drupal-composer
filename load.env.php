@@ -13,8 +13,8 @@ use Symfony\Component\Dotenv\Exception\ExceptionInterface;
  */
 $dotenv = new Dotenv();
 try {
-  $dotenv->load(__DIR__.'/.env');
+//  $dotenv->load(__DIR__.'/.env');
 }
 catch (ExceptionInterface $e) {
-  // Do nothing. Production environments rarely use .env files.
+  // Do nothing.
 }
