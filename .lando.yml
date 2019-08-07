@@ -16,6 +16,12 @@ services:
       - composer install
     run:
       - /app/scripts/bash/install.sh
+#  search:
+#    type: solr
+#    portforward: true
+#  mail:
+#    type: mailhog
+#    portforward: true
 
 tooling:
   drush:
