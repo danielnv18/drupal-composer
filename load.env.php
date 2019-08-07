@@ -9,11 +9,11 @@ use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\Dotenv\Exception\ExceptionInterface;
 
 /**
- * Load any .env file. See /.env.example.
+ * Load .env.local file.
  */
 $dotenv = new Dotenv();
 try {
-//  $dotenv->load(__DIR__.'/.env');
+  $dotenv->load(__DIR__.'/.env.local');
 }
 catch (ExceptionInterface $e) {
   // Do nothing.
