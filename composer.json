@@ -43,14 +43,14 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal-settings/basic": "^1.0",
         "drupal/config_split": "^1.4",
+        "drupal/console": "^1.9",
         "drupal/core": "~8.7.0",
+        "drush/drush": "^9.7",
         "kporras07/composer-symlinks": "^0.1.0@dev",
         "symfony/dotenv": "~3.4|~4.3"
     },
     "require-dev": {
-        "drupal/coder": "^8.2",
-        "drupal/console": "^1.8",
-        "drush/drush": "^9"
+        "drupal/coder": "^8.2"
     },
     "scripts": {
         "post-create-project-cmd": [
