@@ -50,7 +50,7 @@
         "symfony/dotenv": "~3.4|~4.3"
     },
     "require-dev": {
-        "drupal/coder": "^8.2"
+        "vijaycs85/drupal-quality-checker": "^1.0"
     },
     "scripts": {
         "post-create-project-cmd": [
@@ -67,10 +67,6 @@
         "post-update-cmd": [
             "@project-scaffold",
             "@drupal-scaffold"
-        ],
-        "lint:php": [
-            "phpcs --standard=./vendor/drupal/coder/coder_sniffer/Drupal/ruleset.xml  ./src/theme",
-            "phpcs --standard=./vendor/drupal/coder/coder_sniffer/Drupal/ruleset.xml  ./src/modules"
         ]
     },
     "extra": {
