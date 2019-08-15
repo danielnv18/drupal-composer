@@ -1,8 +1,11 @@
 <?php
+
 /**
  * @file
- * Local development override configuration feature.
+ * Dev development override configuration.
  */
+
+use Drupal\Component\Assertion\Handle;
 
 // Active config-split.
 $config['config_split.config_split.dev']['status'] = TRUE;
@@ -33,7 +36,7 @@ $config['devel.settings']['devel_dumper'] = 'kint';
 $config['devel.settings']['error_handlers'][1] = 4;
 
 assert_options(ASSERT_ACTIVE, TRUE);
-\Drupal\Component\Assertion\Handle::register();
+Handle::register();
 
 /**
  * Enable local development services.
@@ -58,8 +61,8 @@ $settings['rebuild_access'] = TRUE;
  */
 $settings['skip_permissions_hardening'] = TRUE;
 
-
 if (!function_exists('watchdog')) {
+
   /**
    * Helper log function.
    */
@@ -67,4 +70,5 @@ if (!function_exists('watchdog')) {
     $tag = $tag ? $tag : 'debug';
     \Drupal::logger($tag)->notice($message);
   }
+
 }

@@ -1,5 +1,7 @@
 <?php
+
 /**
+ * @file
  * Common site settings.
  */
 
@@ -31,7 +33,7 @@ $settings['hash_salt'] = getenv('SALT');
 $config_directories[CONFIG_SYNC_DIRECTORY] = __DIR__ . '/../config/default';
 
 /**
- * Private file path:
+ * Private file path.
  *
  * A local file system path where private files will be stored. This directory
  * must be absolute, outside of the Drupal installation directory and not
@@ -64,15 +66,15 @@ if (file_exists($settingsFile)) {
 }
 
 /**
- * Database settings:
+ * Database settings.
  *
  * The $databases array specifies the database connection or
  * connections that Drupal may use.  Drupal is able to connect
  * to multiple databases, including multiple types of databases,
  * during the same request.
  */
-$databases['default']['default'] = array (
-  'database' =>  getenv('DATABASE_NAME'),
+$databases['default']['default'] = [
+  'database' => getenv('DATABASE_NAME'),
   'username' => getenv('DATABASE_USER'),
   'password' => getenv('DATABASE_PASSWORD'),
   'prefix' => '',
@@ -80,7 +82,7 @@ $databases['default']['default'] = array (
   'port' => getenv('DATABASE_PORT'),
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
-);
+];
 
 /**
  * Load local development override configuration, if available.
