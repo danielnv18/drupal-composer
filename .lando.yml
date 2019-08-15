@@ -27,3 +27,7 @@ tooling:
   drush:
     service: appserver
     cmd: "/app/vendor/bin/drush --root=/app/build/html"
+  install:
+    service: appserver
+    cmd: /app/scripts/bash/install.sh
+    description: Install Drupal

@@ -11,6 +11,8 @@ parameters:
     jsonlint: ~
     phpcpd:
       directory: './src'
-      exclude: ['./src/sites/default/files']
+      exclude: ['vendor', './src/sites/default/files']
     phpcs:
       standard: Drupal
+      ignore_patterns:
+        - src/sites/default/files
