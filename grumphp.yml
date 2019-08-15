@@ -9,6 +9,11 @@ parameters:
     yamllint: ~
     composer: ~
     jsonlint: ~
+    phpcpd:
+      directory: src
+      exclude:
+        - vendor
+        - files
     phpcs:
       standard: Drupal
       ignore_patterns:
