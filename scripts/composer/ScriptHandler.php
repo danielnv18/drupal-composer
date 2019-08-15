@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \DrupalProject\composer\ScriptHandler.
- */
-
 namespace DrupalComposer\composer;
 
 use Composer\Script\Event;
@@ -12,25 +7,33 @@ use Composer\Semver\Comparator;
 use DrupalFinder\DrupalFinder;
 use Drupal\Component\Utility\Crypt;
 
+/**
+ * Project Create script.
+ */
 class ScriptHandler {
 
+  /**
+   * Project setup event.
+   *
+   * @param \Composer\Script\Event $event
+   *   Composer event object.
+   */
   public static function setupProject(Event $event) {
     $io = $event->getIO();
 
     $drupalFinder = new DrupalFinder();
     $drupalFinder->locateRoot(getcwd());
 
-
     $current_dir = explode('/', $drupalFinder->getComposerRoot());
-    $default_project = $current_dir[sizeof($current_dir) -1];
+    $default_project = $current_dir[count($current_dir) - 1];
     $project = $io->ask("What's the project's name? [{$default_project}]: ", $default_project);
-    $save_project =  preg_replace('/\s+/', '-', strtolower(trim($project)));
+    $save_project = preg_replace('/\s+/', '-', strtolower(trim($project)));
 
     exec(
       "sed -i \"s/drupal-composer/{$save_project}/g\" " . $drupalFinder->getComposerRoot() . "/.env"
     );
     exec(
-      "sed -i \"s/drupal-composer/{$save_project}/g\" " . $drupalFinder->getComposerRoot() . "/.lando"
+      "sed -i \"s/drupal-composer/{$save_project}/g\" " . $drupalFinder->getComposerRoot() . "/.lando.yml"
     );
 
     $hash = Crypt::randomBytesBase64(55);
