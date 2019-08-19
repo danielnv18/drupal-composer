@@ -43,7 +43,6 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal-settings/basic": "^1.0",
         "drupal/config_split": "^1.4",
-        "drupal/console": "^1.9",
         "drupal/core": "~8.7.0",
         "drush/drush": "^9.7",
         "kporras07/composer-symlinks": "^0.1.0@dev",
