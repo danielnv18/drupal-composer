@@ -8,8 +8,10 @@ bower_components
 
 # Ignore sensitive information#
 ###############################
-/src/sites/default/services.local.yml
-/src/sites/default/settings.local.php
+/src/sites/*/services.local.yml
+/src/sites/*/settings.local.php
+/src/sites/services.local.yml
+/src/sites/settings.local.php
 /.env.local
 
 # Ignore Drupal's file directory #
