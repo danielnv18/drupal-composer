@@ -8,6 +8,7 @@ parameters:
     phplint: ~
     yamllint: ~
     composer: ~
+    composer_normalize: ~
     jsonlint: ~
     phpcpd:
       directory: './src'
@@ -17,4 +18,21 @@ parameters:
     phpcs:
       standard: Drupal
       ignore_patterns:
-        - src/sites/default/files
+        - .github
+        - .gitlab
+        - bower_components
+        - node_modules
+        - vendor
+        - files
+      triggered_by:
+        - php
+        - module
+        - inc
+        - install
+        - test
+        - profile
+        - theme
+        - css
+        - info
+        - txt
+        - md
