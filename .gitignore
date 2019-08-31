@@ -13,6 +13,7 @@ bower_components
 /src/sites/services.local.yml
 /src/sites/settings.local.php
 /.env.local
+/.lando.local.yml
 
 # Ignore Drupal's file directory #
 ##################################

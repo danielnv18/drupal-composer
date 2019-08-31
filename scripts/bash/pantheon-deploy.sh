@@ -8,8 +8,11 @@ BUILD_DIR="$PROJECT_ROOT/build/pantheon"
 
 echo -e "Syncing repo..."
 if [ ! -d "$BUILD_DIR" ]; then
-  cd ${PROJECT_ROOT}/build
-  git clone ${PANTHEON_GIT} pantheon
+  cd "${PROJECT_ROOT}/build"
+  git clone "ssh://codeserver.dev.${PANTHEON_SITE_ID}@codeserver.dev.${PANTHEON_SITE_ID}.drush.in:2222/~/repository.git" pantheon
+else
+  cd "${BUILD_DIR}"
+  git pull origin master
 fi
 
 # Copy Composer files.
@@ -24,7 +27,6 @@ sed -i -e "s/build\/html\//web\//g" composer.json
 sed -i -e "s/build\/html\//web\//g" composer.lock
 sed -i -e "s/build\/drush/drush/g" composer.json
 sed -i -e "s/build\/drush/drush/g" composer.lock
-
 
 echo -e "Installing composer dependencies..."
 cd "${BUILD_DIR}"
@@ -48,3 +50,12 @@ if [ -d "${BUILD_DIR}/web/themes/" ]; then
   cd "${BUILD_DIR}/web/themes/" && find . -name ".git" -exec rm -Rf {} \;
 fi
 cd "${BUILD_DIR}/vendor" && find . -name ".git" -exec rm -Rf {} \;
+
+cd "${PROJECT_ROOT}"
+IT=$(git log -1 --pretty=format:"%an, %s - %ai"  $*)
+cd "${BUILD_DIR}"
+echo -e "Commit and push"
+git add .
+echo "$IT"
+git commit -am "$IT"
+git push origin master

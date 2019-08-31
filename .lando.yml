@@ -26,8 +26,12 @@ services:
 tooling:
   drush:
     service: appserver
-    cmd: "/app/vendor/bin/drush --root=/app/build/html"
+    cmd: "drush --root=/app/build/html"
   install:
     service: appserver
     cmd: /app/scripts/bash/install.sh
     description: Install Drupal
+  pantheon-deploy:
+    service: appserver
+    cmd: /app/scripts/bash/pantheon-deploy.sh
+    description: Deploy project to a Pantheon instance
