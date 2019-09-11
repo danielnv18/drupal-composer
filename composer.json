@@ -36,7 +36,6 @@
         "php": ">=7.1",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
-        "drupal-composer/drupal-scaffold": "^2.5",
         "drupal-settings/basic": "^1.0",
         "drupal/config_split": "^1.4",
         "drupal/core": "~8.8.0",
@@ -52,17 +51,14 @@
         "post-create-project-cmd": [
             "DrupalComposer\\composer\\ScriptHandler::setupProject"
         ],
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "project-scaffold": [
             "Kporras07\\ComposerSymlinks\\ScriptHandler::createSymlinks"
         ],
         "post-install-cmd": [
-            "@project-scaffold",
-            "@drupal-scaffold"
+            "@project-scaffold"
         ],
         "post-update-cmd": [
-            "@project-scaffold",
-            "@drupal-scaffold"
+            "@project-scaffold"
         ]
     },
     "extra": {
@@ -70,10 +66,6 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "installer-types": [
-            "bower-asset",
-            "npm-asset"
-        ],
         "installer-paths": {
             "build/html/core": [
                 "type:drupal-core"
@@ -94,6 +86,14 @@
                 "type:drupal-drush"
             ]
         },
+        "composer-scaffold": {
+            "allowed-packages": [
+                "drupal/core"
+            ],
+            "locations": {
+                "web-root": "build/html"
+            }
+        },
         "symlinks": {
             "src/modules": "build/html/modules/custom",
             "src/themes": "build/html/themes/custom",
@@ -101,12 +101,6 @@
             "src/libraries": "build/html/libraries/custom",
             "src/sites/default": "build/html/sites/default",
             "src/sites/settings.common.php": "build/html/sites/settings.common.php"
-        },
-        "drupal-scaffold": {
-            "initial": {
-                ".editorconfig": "../../.editorconfig",
-                ".gitattributes": "../../.gitattributes"
-            }
         }
     }
 }
