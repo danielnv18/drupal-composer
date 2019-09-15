@@ -39,7 +39,7 @@
         "drupal-settings/basic": "^1.0",
         "drupal/config_split": "^1.4",
         "drupal/core": "~8.8.0",
-        "drupal/core-composer-scaffold": "^8.7",
+        "drupal/core-composer-scaffold": "^8.8",
         "drush/drush": "^9.0",
         "kporras07/composer-symlinks": "^0.1.0",
         "symfony/dotenv": "~3.4|~4.3",
@@ -89,11 +89,10 @@
         },
         "composer-scaffold": {
             "allowed-packages": [
-                "drupal/core",
-                "drupal-settings/basic"
+                "drupal/core"
             ],
             "locations": {
-                "web-root": "./build/html"
+                "web-root": "build/html"
             }
         },
         "symlinks": {
