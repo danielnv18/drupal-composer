@@ -60,22 +60,22 @@
             "drupal/core": "-p2"
         },
         "installer-paths": {
-            "build/html/core": [
+            "web/core": [
                 "type:drupal-core"
             ],
-            "build/html/modules/contrib/{$name}": [
+            "web/modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
-            "build/html/libraries/{$name}": [
+            "web/libraries/{$name}": [
                 "type:drupal-library"
             ],
-            "build/html/profiles/contrib/{$name}": [
+            "web/profiles/contrib/{$name}": [
                 "type:drupal-profile"
             ],
-            "build/html/themes/contrib/{$name}": [
+            "web/themes/contrib/{$name}": [
                 "type:drupal-theme"
             ],
-            "build/html/drush/contrib/{$name}": [
+            "drush/contrib/{$name}": [
                 "type:drupal-drush"
             ]
         },
@@ -84,7 +84,7 @@
                 "drupal/core"
             ],
             "locations": {
-                "web-root": "build/html"
+                "web-root": "web"
             }
         }
     }

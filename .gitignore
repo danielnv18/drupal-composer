@@ -4,7 +4,9 @@ node_modules
 bower_components
 /drush/contrib/
 /vendor/
-/build/
+/web/core/
+/web/*/contrib
+/web/*/.gitignore
 
 # Ignore sensitive information#
 ###############################
