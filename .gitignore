@@ -7,6 +7,7 @@ bower_components
 /web/core/
 /web/*/contrib
 /web/*/.gitignore
+/web/.gitignore
 
 # Ignore sensitive information#
 ###############################
