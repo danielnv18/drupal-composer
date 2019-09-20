@@ -41,25 +41,16 @@
         "drupal/core": "~8.8.0",
         "drupal/core-composer-scaffold": "^8.8",
         "drush/drush": "^9.0",
-        "kporras07/composer-symlinks": "^0.1.0",
         "symfony/dotenv": "~3.4|~4.3",
         "zaporylie/composer-drupal-optimizations": "^1.1"
     },
     "require-dev": {
+        "drupal/devel": "^2.0",
         "vijaycs85/drupal-quality-checker": "^1.0"
     },
     "scripts": {
         "post-create-project-cmd": [
             "DrupalComposer\\composer\\ScriptHandler::setupProject"
-        ],
-        "project-scaffold": [
-            "Kporras07\\ComposerSymlinks\\ScriptHandler::createSymlinks"
-        ],
-        "post-install-cmd": [
-            "@project-scaffold"
-        ],
-        "post-update-cmd": [
-            "@project-scaffold"
         ]
     },
     "extra": {
@@ -95,14 +86,6 @@
             "locations": {
                 "web-root": "build/html"
             }
-        },
-        "symlinks": {
-            "src/modules": "build/html/modules/custom",
-            "src/themes": "build/html/themes/custom",
-            "src/profiles": "build/html/profiles/custom",
-            "src/libraries": "build/html/libraries/custom",
-            "src/sites/default": "build/html/sites/default",
-            "src/sites/settings.common.php": "build/html/sites/settings.common.php"
         }
     }
 }
