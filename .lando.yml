@@ -3,7 +3,7 @@ recipe: drupal8
 config:
   via: nginx
   php: '7.3'
-  webroot: web
+  webroot: build/html
   database: mysql
   xdebug: true
 
