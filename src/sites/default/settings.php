@@ -760,14 +760,3 @@ $settings['entity_update_batch_size'] = 50;
 if (file_exists($app_root . '/' . $site_path . '/../settings.common.php')) {
   include $app_root . '/' . $site_path . '/../settings.common.php';
 }
-$databases['default']['default'] = array (
-  'database' => 'drupal8',
-  'username' => 'drupal8',
-  'password' => 'drupal8',
-  'prefix' => '',
-  'host' => 'database',
-  'port' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['config_sync_directory'] = 'sites/default/files/config_jgmzNgAYXvqMV8FGtu2tXlKkpGUaatjHuycddWh4znXK0NvpydzequTq3m7hLGQLifVOxKS4dQ/sync';
