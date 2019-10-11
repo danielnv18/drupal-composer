@@ -2,7 +2,7 @@
     "name": "drupal-settings/drupal-composer",
     "description": "Project template for Drupal 8 projects with composer",
     "type": "project",
-    "license": "GPL-2.0+",
+    "license": "GPL-2.0-or-later",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "authors": [
@@ -38,15 +38,15 @@
         "cweagans/composer-patches": "^1.6",
         "drupal-settings/basic": "^1.0",
         "drupal/config_split": "^1.4",
-        "drupal/core": "~8.8.0",
-        "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-vendor-hardening": "^8.8",
+        "drupal/core-composer-scaffold": "^8.8.0",
+        "drupal/core-recommended": "^8.8.0",
         "drush/drush": "^9.0",
         "kporras07/composer-symlinks": "^0.1.0",
         "symfony/dotenv": "~3.4|~4.3",
         "zaporylie/composer-drupal-optimizations": "^1.1"
     },
     "require-dev": {
+        "drupal/dev-dependencies": "^8.8.0",
         "vijaycs85/drupal-quality-checker": "^1.0"
     },
     "scripts": {
@@ -89,10 +89,7 @@
                 "type:drupal-drush"
             ]
         },
-        "composer-scaffold": {
-            "allowed-packages": [
-                "drupal/core"
-            ],
+        "drupal-scaffold": {
             "locations": {
                 "web-root": "build/html"
             }
