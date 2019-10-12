@@ -65,6 +65,8 @@ if (file_exists($settingsFile)) {
   include $settingsFile;
 }
 
+$settings['config_exclude_modules'] = ['devel'];
+
 /**
  * Database settings.
  *

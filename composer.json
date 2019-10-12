@@ -47,6 +47,7 @@
     },
     "require-dev": {
         "drupal/dev-dependencies": "^8.8.0",
+        "drupal/devel": "^2.1",
         "vijaycs85/drupal-quality-checker": "^1.0"
     },
     "scripts": {
