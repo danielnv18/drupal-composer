@@ -14,7 +14,8 @@ bower_components
 /src/sites/settings.local.php
 /.env.local
 /.lando.local.yml
-
+/.editorconfig
+/.gitattributes
 # Ignore Drupal's file directory #
 ##################################
 /src/sites/*/files
