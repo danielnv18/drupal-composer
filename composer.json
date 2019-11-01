@@ -40,7 +40,7 @@
         "drupal/config_split": "^1.4",
         "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/core-recommended": "^8.8.0",
-        "drush/drush": "^9.0",
+        "drush/drush": "^10.0",
         "kporras07/composer-symlinks": "^0.1.0",
         "symfony/dotenv": "~3.4|~4.3",
         "zaporylie/composer-drupal-optimizations": "^1.1"
