@@ -5,16 +5,10 @@
  * Local env.
  */
 
-use Symfony\Component\Dotenv\Dotenv;
-use Symfony\Component\Dotenv\Exception\ExceptionInterface;
+use Dotenv\Dotenv;
 
 /**
- * Load .env.local file.
+ * Load any .env file. See /.env.
  */
-$dotenv = new Dotenv();
-try {
-  $dotenv->load(__DIR__ . '/.env.local');
-}
-catch (ExceptionInterface $e) {
-  // Do nothing.
-}
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->safeLoad();
