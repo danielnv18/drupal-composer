@@ -1,7 +1,10 @@
 # Drupal Composer
 
-This project template provides a starter kit for managing your site dependencies with and it is inspired by 
-[this project][drupal-composer]. This is meant as a starting point. Change things as need it.
+[![Build Status][build-status-master]][build-url]
+
+This project template provides a starter kit for managing your site dependencies
+with and it is inspired by [this project][drupal-composer]. This is meant as a
+starting point. Change things as need it.
 
 ## Create Project
 ```bash
@@ -14,7 +17,9 @@ In order to start the project run:
 ```bash
 lando start
 ```
-This will install the Drupal. If there is an configuration, it will install Drupal with that configuration.
+This will install the Drupal. If there is an configuration, it will install
+Drupal with that configuration.
 
 [drupal-composer]: https://github.com/drupal-composer/drupal-project
-
+[build-status-master]: https://travis-ci.org/danielnv18/drupal-composer.svg?branch=master
+[build-url]: https://travis-ci.org/danielnv18/drupal-composer.svg?branch=master
