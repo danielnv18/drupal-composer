@@ -17,8 +17,8 @@ In order to start the project run:
 ```bash
 lando start
 ```
-This will install the Drupal. If there is an configuration, it will install
-Drupal with that configuration.
+This will install your Drupal project. If there are any configuration files available, it will install
+Drupal with those configurations.
 
 [drupal-composer]: https://github.com/drupal-composer/drupal-project
 [build-status-master]: https://travis-ci.org/danielnv18/drupal-composer.svg?branch=master
