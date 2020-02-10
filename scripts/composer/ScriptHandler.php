@@ -38,7 +38,7 @@ class ScriptHandler {
 
     $hash = Crypt::randomBytesBase64(55);
     exec(
-      "sed -i \"s/pleaseChangeThisToADifferentRandomString/{$hash}/g\" " . $drupalFinder->getComposerRoot() . "/.env"
+      "sed -i \"s+pleaseChangeThisToADifferentRandomString+{$hash}+g\" " . $drupalFinder->getComposerRoot() . "/.env.example"
     );
   }
 
