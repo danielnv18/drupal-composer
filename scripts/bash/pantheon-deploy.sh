@@ -20,10 +20,10 @@ cp load.env.php "${BUILD_DIR}"
 
 # Remove build/html from composer path.
 cd "${BUILD_DIR}" || exit
-sed -i -e "s/build\/html\//web\//g" composer.json
-sed -i -e "s/build\/html\//web\//g" composer.lock
-sed -i -e "s/build\/drush/drush/g" composer.json
-sed -i -e "s/build\/drush/drush/g" composer.lock
+sed -i -e "s+build/html+web+" composer.json
+sed -i -e "s+build/html+web+" composer.lock
+sed -i -e "s+build/drush+drush+g" composer.json
+sed -i -e "s+build/drush+drush+g" composer.lock
 
 echo -e "Installing composer dependencies..."
 cd "${BUILD_DIR}" || exit
