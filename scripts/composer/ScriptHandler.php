@@ -30,7 +30,7 @@ class ScriptHandler {
     $save_project = preg_replace('/\s+/', '-', strtolower(trim($project)));
 
     exec(
-      "sed -i \"s+drupal-composer+{$save_project}+g\" " . $drupalFinder->getComposerRoot() . "/.env"
+      "sed -i \"s+drupal-composer+{$save_project}+g\" " . $drupalFinder->getComposerRoot() . "/.env.example"
     );
     exec(
       "sed -i \"s+drupal-composer+{$save_project}+g\" " . $drupalFinder->getComposerRoot() . "/.lando.yml"
