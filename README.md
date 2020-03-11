@@ -7,15 +7,15 @@ with. This is meant as a starting point. Change things as need it.
 
 ## Getting Started
 
-These instructions will get you a copy of  the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development purposes.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+In order to create a new project, you will need to have install:
 
-```
-Give examples
-```
+* PHP 7.3 or up (this is only for creating the project)
+* Composer
+* Lando
 
 ### Installing
 
@@ -31,7 +31,8 @@ In order to start the project run:
 lando start
 ```
 
-This will install your Drupal project. If there are any configuration files available, it will install Drupal with those configurations.
+This will install your Drupal project. If there are any configuration files available, it will install Drupal with those
+configurations.
 
 ## Built With
 
