@@ -13,7 +13,7 @@ class Tasks extends RoboTasks {
    * Project setup task.
    */
   public function setup() {
-    $drupalFinder = new DrupalFinder();
+    $drupalFinder = new \DrupalFinder\DrupalFinder();
     $drupalFinder->locateRoot(getcwd());
     $composerRoot = $drupalFinder->getComposerRoot();
 
