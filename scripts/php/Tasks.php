@@ -36,6 +36,11 @@ class Tasks extends RoboTasks {
       ->to($projectName)
       ->run();
 
+    $this->taskReplaceInFile($composerRoot . '/drush/sites/self.site.yml')
+      ->from('drupal-composer')
+      ->to($projectName)
+      ->run();
+
     // Generate a hash.
     $hash = Crypt::randomBytesBase64(55);
     $this->taskReplaceInFile($composerRoot . '/.env.example')
