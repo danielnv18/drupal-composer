@@ -3,6 +3,7 @@
 use DrupalFinder\DrupalFinder;
 use Drupal\Component\Utility\Crypt;
 use Robo\Tasks as RoboTasks;
+use Drupal\Core\File;
 
 /**
  * Class Tasks.
@@ -13,7 +14,7 @@ class Tasks extends RoboTasks {
    * Project setup task.
    */
   public function setup() {
-    $drupalFinder = new \DrupalFinder\DrupalFinder();
+    $drupalFinder = new DrupalFinder();
     $drupalFinder->locateRoot(getcwd());
     $composerRoot = $drupalFinder->getComposerRoot();
 
@@ -53,3 +54,8 @@ class Tasks extends RoboTasks {
   }
 
 }
+
+
+
+
+
