@@ -28,6 +28,7 @@
         "drupal/drupal": "*"
     },
     "require-dev": {
+        "consolidation/robo": "^2.0",
         "drupal/core-dev": "^8.8.0",
         "drupal/devel": "^2.0",
         "vijaycs85/drupal-quality-checker": "^1.0"
@@ -35,6 +36,29 @@
     "config": {
         "sort-packages": true
     },
+    "scripts": {
+        "post-create-project-cmd": [
+            "composer robo setup",
+            "@project-scaffold"
+        ],
+        "project-scaffold": [
+            "Kporras07\\ComposerSymlinks\\ScriptHandler::createSymlinks"
+        ],
+        "robo": "robo --ansi --load-from $(pwd)/scripts/php/Tasks.php"
+    },
+    "autoload": {
+        "files": [
+            "load.env.php"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "extra": {
         "composer-exit-on-patch-failure": true,
         "drupal-scaffold": {
@@ -74,35 +98,5 @@
             "src/sites/default": "build/html/sites/default",
             "src/sites/settings.common.php": "build/html/sites/settings.common.php"
         }
-    },
-    "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ],
-        "files": [
-            "load.env.php"
-        ]
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        }
-    ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "scripts": {
-        "post-install-cmd": [
-            "@project-scaffold"
-        ],
-        "post-update-cmd": [
-            "@project-scaffold"
-        ],
-        "post-create-project-cmd": [
-            "DrupalComposer\\composer\\ScriptHandler::setupProject"
-        ],
-        "project-scaffold": [
-            "Kporras07\\ComposerSymlinks\\ScriptHandler::createSymlinks"
-        ]
     }
 }
