@@ -61,8 +61,7 @@ $settingsFile = $app_root . '/' . $site_path . '/settings/settings.' . $env . '.
 if (file_exists($servicesFile)) {
   $settings['container_yamls'][] = $servicesFile;
 }
-if (file_exists($settingsFile))
-{
+if (file_exists($settingsFile)) {
   include $settingsFile;
 }
 

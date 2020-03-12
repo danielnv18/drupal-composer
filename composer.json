@@ -41,6 +41,9 @@
             "composer robo setup",
             "@project-scaffold"
         ],
+        "post-install-cmd": [
+            "@project-scaffold"
+        ],
         "project-scaffold": [
             "Kporras07\\ComposerSymlinks\\ScriptHandler::createSymlinks"
         ],
