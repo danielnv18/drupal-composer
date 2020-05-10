@@ -10,7 +10,8 @@ parameters:
     composer: ~
     jsonlint: ~
     phpcpd:
-      directory: './src'
+      directory:
+        - './src'
       exclude:
         - vendor
         - files
