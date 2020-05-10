@@ -30,7 +30,7 @@ $settings['hash_salt'] = getenv('SALT');
  * The $config_directories array specifies the location of file system
  * directories used for configuration data.
  */
-$config_directories[CONFIG_SYNC_DIRECTORY] = __DIR__ . '/../config/default';
+$config_directories['config_sync_directory'] = __DIR__ . '/../config/default';
 
 /**
  * Private file path.
