@@ -12,12 +12,12 @@
     ],
     "require": {
         "php": ">=7.3",
-        "composer/installers": "^1.2",
+        "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6.5",
         "drupal-settings/basic": "^1.8",
         "drupal/config_split": "^1.5",
-        "drupal/core": "^9.0.0",
-        "drupal/core-composer-scaffold": "^9.0.0",
+        "drupal/core-recommended": "^9",
+        "drupal/core-composer-scaffold": "^9",
         "drush/drush": "^10.0.0",
         "kporras07/composer-symlinks": "0.1.x-dev",
         "vlucas/phpdotenv": "^4.0",
@@ -28,7 +28,7 @@
     },
     "require-dev": {
         "consolidation/robo": "^2.0",
-        "drupal/core-dev": "^9.0.0",
+        "drupal/core-dev": "^9",
         "drupal/devel": "^3.0",
         "vijaycs85/drupal-quality-checker": "^1.0"
     },
